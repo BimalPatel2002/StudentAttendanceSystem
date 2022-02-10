@@ -21,7 +21,7 @@ class ResetController extends Controller
      */
     public function index()
     {
-        return view("reset.password");
+      return view("reset.password");
     }
 
     public function verify_email()
@@ -29,7 +29,7 @@ class ResetController extends Controller
       $uid = Session::get('uid');
       $verify = app('firebase.auth')->getUser($uid)->emailVerified;
         if ($verify == 1) {
-          return redirect()->route('home');
+          return redirect()->route('data');
         }
         else{
           try {

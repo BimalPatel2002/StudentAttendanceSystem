@@ -60,9 +60,10 @@ class RegisterController extends Controller
          ];
          $createdUser = $this->auth->createUser($userProperties);
          return redirect()->route('login');
-       } catch (FirebaseException $e) {
-          Session::flash('error', $e->getMessage());
-          return back()->withInput();
+      } 
+       catch (FirebaseException $e) {
+         Session::flash('error', $e->getMessage());
+         return back()->withInput();
        }
     }
  }

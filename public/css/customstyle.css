@@ -1,0 +1,129 @@
+
+.headerTopArea {
+	background-color: aliceblue;
+	color: white;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.headerTopArea a {
+	color: #34495e;
+	font-size: 0.89em;
+	font-weight: 600;
+}
+
+.headerBottomArea {
+	padding: 0px 0;
+	border-bottom: 1px solid #eaeaea;
+}
+
+.container-fluid {
+	padding: 0px 0;	
+}
+
+nav ul li a {
+	font-size: 1.1em;
+	font-weight: 600;
+}
+
+.hero-img1 {
+	height: 500px;
+	background-image: url("../imgs/hero-img-full.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #cccccc;
+}
+
+.user-graduate {
+	height: 150px;
+	width: 150px;
+	margin-top: 20px;
+	margin-right: 60px;
+	margin-bottom: 20px;
+	background-color:#cccccc;
+	border-radius: 50%;
+}
+
+.section-about-company {
+	background-color: aliceblue;
+}
+
+.blue-hero-div {
+	background-color: #0492C2;
+	color: white;
+}
+
+.blue-about-div {
+	background-color: #52b2bf;
+	color: white;
+}
+
+.feature-img {
+	width: 200px;
+}
+
+hr {
+	margin-top: 5px;
+	margin-bottom: 0px;
+}
+
+.requirements-section {
+	color: white;
+	background-color: #004d80;
+}
+
+
+/* START : Footer */
+.fullfooter {
+	background-color: #243c4f;
+}
+
+.topFooter p {
+	color: white;
+}
+
+.topFooter h3 {
+	color: white;
+}
+
+.topFooter a {
+	color: white;
+}
+
+.bottomFooter {
+	background-color: #031b2e;
+}
+
+.bottomFooter p {
+	color: white;
+	margin-bottom: 0;
+}
+/* END : Footer */
+
+/* END-------------------- of home page ---------------------- */
+
+.breadcrumb {
+	background-color: transparent;
+	padding: 0;
+}
+.section-breadcrumps{
+	background-color: aliceblue;
+}
+.address h4{
+	color: #3498db;
+}
+.address p {
+	color: #031b2e;
+	font-weight: 600;
+}
+
+/* START-------------------- Skill Set CSS ---------------------- */
+
+ .bar{
+	border: 1px solid #616161;
+	border-radius: 15px;
+	color: #FFF;
+	font-weight: 600;
+	
+ }
+
+/* END-------------------- Skill Set CSS ---------------------- */

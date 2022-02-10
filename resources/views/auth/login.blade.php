@@ -1,74 +1,59 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/login-form.css" />
+  <title>Login</title>
+</head>
 
-@section('content')
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="card">
-          <div class="card-header">{{ __('Login') }}</div>
-
-          <div class="card-body">
-            <form method="POST" action="{{ route('login') }}">
-              @csrf
-
-              <div class="form-group row">
-                <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                <div class="col-md-6">
-                  <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                    @error('email')
-                      <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                      </span>
-                    @enderror
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                  <div class="col-md-6">
-                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                      @error('password')
-                        <span class="invalid-feedback" role="alert">
-                          <strong>{{ $message }}</strong>
-                        </span>
-                      @enderror
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                    <div class="col-md-6 offset-md-4">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                        <label class="form-check-label" for="remember">
-                          {{ __('Remember Me') }}
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="form-group row mb-0">
-                    <div class="col-md-8 offset-md-4">
-                      <button type="submit" class="btn btn-primary">
-                        {{ __('Login') }}
-                      </button>
-
-                        <a class="btn btn-link" href="/password/reset" style="text-decoration: none;">
-                          Forgot Your Password?
-                        </a>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
+<body>
+  <div>
+      <form method="post" action="{{ route('login') }}">
+        @csrf
+      <h1>LOGIN FORM</h1>
+      <div class="imgcontainer">
+        <img src="/imgs/students-cap.png" alt="Avatar" class="avatar">
       </div>
 
+      <div class="container">
+        <label for="email"><b>Enter Id</b></label>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+
+        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+
+        <input id="email" type="email"  class="form-control @error('email') is-invalid @enderror" placeholder="Enter Email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+
+        @error('email')
+          <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+          </span>
+        @enderror
+
+        <br>
+
+        <label for="password"><b>Password</b></label>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-unlock-fill" viewBox="0 0 16 16">
+
+        <path d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2z"/>
+        </svg>
+
+        <input type="password" id="password" placeholder="Enter Password" name="password" class="form-control @error('password') is-invalid @enderror" required autocomplete="current-password">
+
+        @error('password')
+        <span class="invalid-feedback" role="alert">
+          <strong>{{ $message }}</strong>
+        </span>
+        @enderror
+
+        <br>
+        <button class="login-button" type="submit">Login</button><br>
+        <span class="psw btn btn-link"><a href="/password/reset">Forgot password?</a></span>
+
+      </div>
+    </form>
+  </div>
 
 
       <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
@@ -77,39 +62,16 @@
       <script>
       // Initialize Firebase
       var firebaseConfig = {
-        apiKey: "AIzaSyCoROKp7nbcXqPP0YtA4fO3sPiVYVyi9pI",
-        authDomain: "laravel-auth-9a60c.firebaseapp.com",
-        projectId: "laravel-auth-9a60c",
-        storageBucket: "laravel-auth-9a60c.appspot.com",
-      messagingSenderId: "969104073456",
-      appId: "1:969104073456:web:5a843163dbf96cb9fd1835"
+        apiKey: "AIzaSyBUtt5zb8gj-ad6eM_FESOLLS2zcbLlpJ8",
+        authDomain: "sms-83bd5.firebaseapp.com",
+        databaseURL: "https://sms-83bd5-default-rtdb.firebaseio.com",
+        projectId: "sms-83bd5",
+        storageBucket: "sms-83bd5.appspot.com",
+        messagingSenderId: "519792365993",
+        appId: "1:519792365993:web:44922734eb8e76d0f474b8",
+        measurementId: "G-5038MRJ82B"
       };
-      firebase.initializeApp(config);
-      var facebookProvider = new firebase.auth.FacebookAuthProvider();
-      var googleProvider = new firebase.auth.GoogleAuthProvider();
-      var facebookCallbackLink = '/login/facebook/callback';
-      var googleCallbackLink = '/login/google/callback';
-      async function socialSignin(provider) {
-        var socialProvider = null;
-        if (provider == "facebook") {
-          socialProvider = facebookProvider;
-          document.getElementById('social-login-form').action = facebookCallbackLink;
-        } else if (provider == "google") {
-          socialProvider = googleProvider;
-          document.getElementById('social-login-form').action = googleCallbackLink;
-        } else {
-          return;
-        }
-        firebase.auth().signInWithPopup(socialProvider).then(function(result) {
-          result.user.getIdToken().then(function(result) {
-            document.getElementById('social-login-tokenId').value = result;
-            document.getElementById('social-login-form').submit();
-          });
-        }).catch(function(error) {
-          // do error handling
-          console.log(error);
-        });
-      }
       </script>
 
-    @endsection
+</body>
+</html>
